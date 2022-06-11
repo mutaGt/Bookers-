@@ -1,0 +1,29 @@
+<%= flash[:notice] %>
+<h1>
+  <strong>Editing Book</strong>
+</h1>
+<% if @book.errors.any? %>
+ <%= @book.errors.count %>errors
+ <ul>
+   <% @book.errors.full_messages.each do |message| %>
+   <li><%= message %></li>
+   <% end %>
+ </ul>
+ <% end %>
+<%= form_with model: @book,url: update_book_path(@book.id),　method: :patch do |f| %>
+
+<div class="label">Title</div>
+<%= f.text_field :title %>
+
+<div class="label">Body</div>
+<%= f.text_area :body %>
+
+<p><%= f.submit'Update Book' %></p>
+
+<p>
+<a><%= link_to'Show', @book %></a>
+|
+<a class="back" href="/books">Back</a>
+</p>
+
+<% end %>

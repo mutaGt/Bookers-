@@ -21,7 +21,8 @@
 }
 
 body{
-  margin: 30px;
+  margin: 33px;
+  display: block;
 }
 
 h1{
@@ -41,6 +42,12 @@ strong,th{
   line-height: 18px;
 }
 
+tr{
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 th{
   font-size: 13px;
   padding: 1px 1px 5px;
@@ -48,9 +55,11 @@ th{
 
 td{
   font-size: 13px;
-  margin: 33px;
-  padding: 1px 5px 7px;
+  padding-bottom: 7px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
+
 
 h2{
   font-size: 19.5px;
@@ -61,8 +70,11 @@ h2{
   margin-bottom: 10px;
 }
 
-label{
-  display: block;
+.label{
   font-size: 13px;
 }
 
+a{
+  font-size: 13px;
+  font-family: verdana,arial,helvetica,sans-serif;
+}
